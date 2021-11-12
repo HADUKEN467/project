@@ -31,11 +31,10 @@ class Canvas(QtWidgets.QLabel):
         self.pen_color = QtGui.QColor(c)
 
     def mouseMoveEvent(self, e):
-        if self.last_x is None:  # First event.
+        if self.last_x is None:
             self.last_x = e.x()
             self.last_y = e.y()
-            return  # Ignore the first time.
-
+            return
         painter = QtGui.QPainter(self.pixmap())
         p = painter.pen()
         p.setWidth(4)
@@ -45,7 +44,6 @@ class Canvas(QtWidgets.QLabel):
         painter.end()
         self.update()
 
-        # Update the origin for next time.
         self.last_x = e.x()
         self.last_y = e.y()
 
