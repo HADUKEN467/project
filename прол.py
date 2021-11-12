@@ -1,5 +1,5 @@
 import sys
-from PyQt5 import QtGui, QtWidgets, uic
+from PyQt5 import QtGui, QtWidgets
 
 COLORS = [
     '#000000', '#141923', '#414168', '#3a7fa7', '#35e3e3', '#8fd970', '#5ebb49',
